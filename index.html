@@ -17,8 +17,8 @@
             padding: 0;
         }
     </style>
-    <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7dSg4pUYKelOu5ZaaLMOvf7oOhPwtMJU&v=3.28&libraries=geometry&callback=locate"></script>
-    <!-- <script type="text/javascript" src=https://googlemaps.github.io/js-map-label/src/maplabel-compiled.js></script> -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7dSg4pUYKelOu5ZaaLMOvf7oOhPwtMJU&v=3.28&libraries=geometry"></script>
+    <script type="text/javascript" src=https://googlemaps.github.io/js-map-label/src/maplabel-compiled.js></script>
     
     <script type="text/javascript">
         var map;
@@ -100,12 +100,12 @@
             });
             drawRects();
 
-            // var mapLabel = new MapLabel({
-            //     text: 'Tehtud: ' + green + '/' + total,
-            //     position: google.maps.geometry.spherical.computeOffset(x, 75000, 280),
-            //     fontSize: 16, fontColor: "white", strokeWeight: 0,
-            //     map: map
-            // });
+            var mapLabel = new MapLabel({
+                text: 'Tehtud: ' + green + '/' + total,
+                position: google.maps.geometry.spherical.computeOffset(x, 75000, 280),
+                fontSize: 16, fontColor: "white", strokeWeight: 0,
+                map: map
+            });
         }
 
         function drawRects() {
@@ -157,7 +157,7 @@
     </script>
 </head>
 
-<body>
+<body onload="locate()">
     <div id="map-canvas"></div>
 </body>
 
