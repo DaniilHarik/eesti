@@ -101,6 +101,7 @@
                 strokeWeight: 0.8, fillOpacity: 0, map: map,
                 center: x, radius: 50000
             });
+            
             drawRects();
 
             var mapLabel = new MapLabel({
@@ -117,6 +118,11 @@
 
             var ctaLayer2 = new google.maps.KmlLayer({
                 url: 'https://daniilharik.github.io/eesti/layers/Peraküla-Aegviidu-Ähijärve.kml',
+                map: map
+            });
+            
+            var ctaLayer3 = new google.maps.KmlLayer({
+                url: 'https://feeds.foursquare.com/history/WXXRABLEHGVBV4NYGR5UUN0AO24RP4T5.kml?count=25',
                 map: map
             });
         }
