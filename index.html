@@ -32,7 +32,7 @@
         }
 
         rectcolors = [
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 2, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 2, 1, 1, 1, 2, 2, 1, 2],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 1, 1, 2, 2, 2, 1, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
@@ -107,6 +107,11 @@
                 text: 'Tehtud: ' + green + '/' + total,
                 position: google.maps.geometry.spherical.computeOffset(x, 75000, 280),
                 fontSize: 16, fontColor: "white", strokeWeight: 0,
+                map: map
+            });
+
+            var ctaLayer = new google.maps.KmlLayer({
+                url: 'https://daniilharik.github.io/eesti/layers/Oandu-Aegvidu-Ikla.kml',
                 map: map
             });
         }
